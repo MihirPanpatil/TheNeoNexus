@@ -230,7 +230,7 @@ export default function ServicesPage() {
         <div className="container">
           <Tabs defaultValue="web-design" className="services-tabs">
             <div className="flex justify-center mb-12 overflow-x-auto pb-2">
-              <TabsList className="bg-mute <TabsList className="bg-muted/50">
+              <TabsList className="bg-muted/50">
                 {services.map(service => (
                   <TabsTrigger 
                     key={service.id} 
@@ -451,7 +451,5 @@ export default function ServicesPage() {
         </div>
       </section>
     </div>
-  )
-}
   )
 }
