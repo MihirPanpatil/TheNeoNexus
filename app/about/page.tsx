@@ -15,13 +15,13 @@ export default function AboutPage() {
     gsap.fromTo(
       '.about-title', 
       { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+      { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" } // Reduced duration
     )
     
     gsap.fromTo(
       '.about-subtitle', 
       { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, delay: 0.2, ease: "power3.out" }
+      { y: 0, opacity: 1, duration: 0.6, delay: 0.1, ease: "power3.out" } // Reduced duration and delay
     )
     
     // Story section animations
@@ -31,10 +31,11 @@ export default function AboutPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.8, 
+        duration: 0.6, // Reduced duration
         scrollTrigger: {
           trigger: '.story-section',
-          start: "top 80%",
+          start: "top 90%", // Changed from 80% to 90%
+          once: true
         }
       }
     )
@@ -45,11 +46,12 @@ export default function AboutPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.8, 
-        delay: 0.2,
+        duration: 0.6, // Reduced duration
+        delay: 0.1, // Reduced delay
         scrollTrigger: {
           trigger: '.story-section',
-          start: "top 80%",
+          start: "top 90%", // Changed from 80% to 90%
+          once: true
         }
       }
     )
@@ -61,11 +63,12 @@ export default function AboutPage() {
       { 
         y: 0, 
         opacity: 1, 
-        stagger: 0.1,
-        duration: 0.8,
+        stagger: 0.05, // Reduced stagger
+        duration: 0.6, // Reduced duration
         scrollTrigger: {
           trigger: '.stats-section',
-          start: "top 80%",
+          start: "top 90%", // Changed from 80% to 90%
+          once: true
         }
       }
     )
@@ -77,10 +80,11 @@ export default function AboutPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.8,
+        duration: 0.6, // Reduced duration
         scrollTrigger: {
           trigger: '.team-section',
-          start: "top 80%",
+          start: "top 90%", // Changed from 80% to 90%
+          once: true
         }
       }
     )
@@ -91,11 +95,12 @@ export default function AboutPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.8,
-        delay: 0.2,
+        duration: 0.6, // Reduced duration
+        delay: 0.1, // Reduced delay
         scrollTrigger: {
           trigger: '.team-section',
-          start: "top 80%",
+          start: "top 90%", // Changed from 80% to 90%
+          once: true
         }
       }
     )
@@ -106,11 +111,12 @@ export default function AboutPage() {
       { 
         y: 0, 
         opacity: 1, 
-        stagger: 0.1,
-        duration: 0.8,
+        stagger: 0.05, // Reduced stagger
+        duration: 0.6, // Reduced duration
         scrollTrigger: {
           trigger: '.team-grid',
-          start: "top 90%",
+          start: "top 90%", // Already at 90%
+          once: true
         }
       }
     )
@@ -122,10 +128,11 @@ export default function AboutPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.8,
+        duration: 0.6, // Reduced duration
         scrollTrigger: {
           trigger: '.values-section',
-          start: "top 80%",
+          start: "top 90%", // Changed from 80% to 90%
+          once: true
         }
       }
     )
@@ -136,11 +143,12 @@ export default function AboutPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.8,
-        delay: 0.2,
+        duration: 0.6, // Reduced duration
+        delay: 0.1, // Reduced delay
         scrollTrigger: {
           trigger: '.values-section',
-          start: "top 80%",
+          start: "top 90%", // Changed from 80% to 90%
+          once: true
         }
       }
     )
@@ -151,11 +159,12 @@ export default function AboutPage() {
       { 
         y: 0, 
         opacity: 1, 
-        stagger: 0.1,
-        duration: 0.8,
+        stagger: 0.05, // Reduced stagger
+        duration: 0.6, // Reduced duration
         scrollTrigger: {
           trigger: '.values-grid',
-          start: "top 90%",
+          start: "top 90%", // Already at 90%
+          once: true
         }
       }
     )

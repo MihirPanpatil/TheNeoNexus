@@ -104,20 +104,20 @@ export default function PortfolioPage() {
     gsap.fromTo(
       '.portfolio-title', 
       { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+      { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" } // Reduced duration
     )
     
     gsap.fromTo(
       '.portfolio-subtitle', 
       { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, delay: 0.2, ease: "power3.out" }
+      { y: 0, opacity: 1, duration: 0.6, delay: 0.1, ease: "power3.out" } // Reduced duration and delay
     )
     
     // Filter buttons animation
     gsap.fromTo(
       '.filter-buttons', 
       { y: 20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, delay: 0.4, ease: "power3.out" }
+      { y: 0, opacity: 1, duration: 0.6, delay: 0.2, ease: "power3.out" } // Reduced duration and delay
     )
     
     return () => {
@@ -133,8 +133,8 @@ export default function PortfolioPage() {
       {
         y: 0,
         opacity: 1,
-        stagger: 0.1,
-        duration: 0.6,
+        stagger: 0.05, // Reduced stagger
+        duration: 0.6, // Reduced duration
         ease: "power3.out"
       }
     )

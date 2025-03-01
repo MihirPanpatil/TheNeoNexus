@@ -117,13 +117,13 @@ export default function ServicesPage() {
     gsap.fromTo(
       '.services-title', 
       { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+      { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" } // Reduced duration
     )
     
     gsap.fromTo(
       '.services-subtitle', 
       { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, delay: 0.2, ease: "power3.out" }
+      { y: 0, opacity: 1, duration: 0.6, delay: 0.1, ease: "power3.out" } // Reduced duration and delay
     )
     
     // Services tabs animation
@@ -133,8 +133,8 @@ export default function ServicesPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.8,
-        delay: 0.4,
+        duration: 0.6, // Reduced duration
+        delay: 0.2, // Reduced delay
         ease: "power3.out"
       }
     )
@@ -146,11 +146,12 @@ export default function ServicesPage() {
       { 
         y: 0, 
         opacity: 1, 
-        stagger: 0.1,
-        duration: 0.8,
+        stagger: 0.05, // Reduced stagger
+        duration: 0.6, // Reduced duration
         scrollTrigger: {
           trigger: '.services-grid',
-          start: "top 80%",
+          start: "top 90%", // Changed from 80% to 90%
+          once: true // Animation only plays once
         }
       }
     )
@@ -162,10 +163,11 @@ export default function ServicesPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.8,
+        duration: 0.6, // Reduced duration
         scrollTrigger: {
           trigger: '.process-section',
-          start: "top 80%",
+          start: "top 90%", // Changed from 80% to 90%
+          once: true
         }
       }
     )
@@ -176,11 +178,12 @@ export default function ServicesPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.8,
-        delay: 0.2,
+        duration: 0.6, // Reduced duration
+        delay: 0.1, // Reduced delay
         scrollTrigger: {
           trigger: '.process-section',
-          start: "top 80%",
+          start: "top 90%", // Changed from 80% to 90%
+          once: true
         }
       }
     )
@@ -191,11 +194,12 @@ export default function ServicesPage() {
       { 
         y: 0, 
         opacity: 1, 
-        stagger: 0.1,
-        duration: 0.8,
+        stagger: 0.05, // Reduced stagger
+        duration: 0.6, // Reduced duration
         scrollTrigger: {
           trigger: '.process-steps',
-          start: "top 80%",
+          start: "top 90%", // Changed from 80% to 90%
+          once: true
         }
       }
     )

@@ -32,13 +32,13 @@ export default function ContactPage() {
     gsap.fromTo(
       '.contact-title', 
       { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+      { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" } // Reduced duration
     )
     
     gsap.fromTo(
       '.contact-subtitle', 
       { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, delay: 0.2, ease: "power3.out" }
+      { y: 0, opacity: 1, duration: 0.6, delay: 0.1, ease: "power3.out" } // Reduced duration and delay
     )
     
     // Form and info animations
@@ -48,9 +48,14 @@ export default function ContactPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.8, 
-        delay: 0.4,
-        ease: "power3.out" 
+        duration: 0.6, // Reduced duration
+        delay: 0.2, // Reduced delay
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: '.contact-form',
+          start: "top 90%", // Added scroll trigger
+          once: true
+        }
       }
     )
     
@@ -60,9 +65,14 @@ export default function ContactPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.8, 
-        delay: 0.6,
-        ease: "power3.out" 
+        duration: 0.6, // Reduced duration
+        delay: 0.3, // Reduced delay
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: '.contact-info',
+          start: "top 90%", // Added scroll trigger
+          once: true
+        }
       }
     )
     

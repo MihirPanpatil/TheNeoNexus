@@ -52,10 +52,11 @@ export default function Process() {
       {
         y: 0,
         opacity: 1,
-        duration: 0.8,
+        duration: 0.6, // Reduced duration
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 80%",
+          start: "top 90%", // Changed from 80% to 90%
+          once: true
         }
       }
     )
@@ -66,11 +67,12 @@ export default function Process() {
       {
         y: 0,
         opacity: 1,
-        duration: 0.8,
-        delay: 0.2,
+        duration: 0.6, // Reduced duration
+        delay: 0.1, // Reduced delay
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 80%",
+          start: "top 90%", // Changed from 80% to 90%
+          once: true
         }
       }
     )
@@ -84,11 +86,12 @@ export default function Process() {
         {
           y: 0,
           opacity: 1,
-          duration: 0.8,
-          delay: 0.2 + (index * 0.1),
+          duration: 0.6, // Reduced duration
+          delay: 0.1 + (index * 0.05), // Reduced delay and stagger
           scrollTrigger: {
             trigger: step,
-            start: "top 90%",
+            start: "top 90%", // Already at 90%
+            once: true
           }
         }
       )
