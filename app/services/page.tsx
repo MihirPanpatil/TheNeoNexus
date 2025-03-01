@@ -117,13 +117,13 @@ export default function ServicesPage() {
     gsap.fromTo(
       '.services-title', 
       { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" } // Reduced duration
+      { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }
     )
     
     gsap.fromTo(
       '.services-subtitle', 
       { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, delay: 0.1, ease: "power3.out" } // Reduced duration and delay
+      { y: 0, opacity: 1, duration: 0.6, delay: 0.1, ease: "power3.out" }
     )
     
     // Services tabs animation
@@ -133,25 +133,24 @@ export default function ServicesPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.6, // Reduced duration
-        delay: 0.2, // Reduced delay
+        duration: 0.6,
+        delay: 0.2,
         ease: "power3.out"
       }
     )
     
-    // Service cards animation
+    // Service cards animation - UPDATED: removed stagger
     gsap.fromTo(
       '.service-card', 
       { y: 30, opacity: 0 },
       { 
         y: 0, 
-        opacity: 1, 
-        stagger: 0.05, // Reduced stagger
-        duration: 0.6, // Reduced duration
+        opacity: 1,
+        duration: 0.6,
         scrollTrigger: {
           trigger: '.services-grid',
-          start: "top 90%", // Changed from 80% to 90%
-          once: true // Animation only plays once
+          start: "top 90%",
+          once: true
         }
       }
     )
@@ -163,10 +162,10 @@ export default function ServicesPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.6, // Reduced duration
+        duration: 0.6,
         scrollTrigger: {
           trigger: '.process-section',
-          start: "top 90%", // Changed from 80% to 90%
+          start: "top 90%",
           once: true
         }
       }
@@ -178,27 +177,27 @@ export default function ServicesPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.6, // Reduced duration
-        delay: 0.1, // Reduced delay
+        duration: 0.6,
+        delay: 0.1,
         scrollTrigger: {
           trigger: '.process-section',
-          start: "top 90%", // Changed from 80% to 90%
+          start: "top 90%",
           once: true
         }
       }
     )
     
+    // Process steps - UPDATED: removed stagger
     gsap.fromTo(
       '.process-step', 
       { y: 30, opacity: 0 },
       { 
         y: 0, 
-        opacity: 1, 
-        stagger: 0.05, // Reduced stagger
-        duration: 0.6, // Reduced duration
+        opacity: 1,
+        duration: 0.6,
         scrollTrigger: {
           trigger: '.process-steps',
-          start: "top 90%", // Changed from 80% to 90%
+          start: "top 90%",
           once: true
         }
       }

@@ -104,20 +104,20 @@ export default function PortfolioPage() {
     gsap.fromTo(
       '.portfolio-title', 
       { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" } // Reduced duration
+      { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }
     )
     
     gsap.fromTo(
       '.portfolio-subtitle', 
       { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, delay: 0.1, ease: "power3.out" } // Reduced duration and delay
+      { y: 0, opacity: 1, duration: 0.6, delay: 0.1, ease: "power3.out" }
     )
     
     // Filter buttons animation
     gsap.fromTo(
       '.filter-buttons', 
       { y: 20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, delay: 0.2, ease: "power3.out" } // Reduced duration and delay
+      { y: 0, opacity: 1, duration: 0.6, delay: 0.2, ease: "power3.out" }
     )
     
     return () => {
@@ -126,15 +126,14 @@ export default function PortfolioPage() {
   }, [])
   
   useEffect(() => {
-    // Animate projects when category changes
+    // UPDATED: Animate all projects at once when category changes
     gsap.fromTo(
       '.project-item', 
-      { y: 30, opacity: 0 },
+      { y: 20, opacity: 0 },
       {
         y: 0,
         opacity: 1,
-        stagger: 0.05, // Reduced stagger
-        duration: 0.6, // Reduced duration
+        duration: 0.4, // Faster animation
         ease: "power3.out"
       }
     )

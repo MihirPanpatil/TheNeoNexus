@@ -15,13 +15,13 @@ export default function AboutPage() {
     gsap.fromTo(
       '.about-title', 
       { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" } // Reduced duration
+      { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }
     )
     
     gsap.fromTo(
       '.about-subtitle', 
       { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, delay: 0.1, ease: "power3.out" } // Reduced duration and delay
+      { y: 0, opacity: 1, duration: 0.6, delay: 0.1, ease: "power3.out" }
     )
     
     // Story section animations
@@ -31,10 +31,10 @@ export default function AboutPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.6, // Reduced duration
+        duration: 0.6,
         scrollTrigger: {
           trigger: '.story-section',
-          start: "top 90%", // Changed from 80% to 90%
+          start: "top 90%",
           once: true
         }
       }
@@ -46,28 +46,27 @@ export default function AboutPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.6, // Reduced duration
-        delay: 0.1, // Reduced delay
+        duration: 0.6,
+        delay: 0.1,
         scrollTrigger: {
           trigger: '.story-section',
-          start: "top 90%", // Changed from 80% to 90%
+          start: "top 90%",
           once: true
         }
       }
     )
     
-    // Stats animations
+    // Stats animations - UPDATED: removed stagger
     gsap.fromTo(
       '.stat-item', 
       { y: 30, opacity: 0 },
       { 
         y: 0, 
-        opacity: 1, 
-        stagger: 0.05, // Reduced stagger
-        duration: 0.6, // Reduced duration
+        opacity: 1,
+        duration: 0.6,
         scrollTrigger: {
           trigger: '.stats-section',
-          start: "top 90%", // Changed from 80% to 90%
+          start: "top 90%",
           once: true
         }
       }
@@ -80,10 +79,10 @@ export default function AboutPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.6, // Reduced duration
+        duration: 0.6,
         scrollTrigger: {
           trigger: '.team-section',
-          start: "top 90%", // Changed from 80% to 90%
+          start: "top 90%",
           once: true
         }
       }
@@ -95,27 +94,27 @@ export default function AboutPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.6, // Reduced duration
-        delay: 0.1, // Reduced delay
+        duration: 0.6,
+        delay: 0.1,
         scrollTrigger: {
           trigger: '.team-section',
-          start: "top 90%", // Changed from 80% to 90%
+          start: "top 90%",
           once: true
         }
       }
     )
     
+    // Team members - UPDATED: removed stagger
     gsap.fromTo(
       '.team-member', 
       { y: 30, opacity: 0 },
       { 
         y: 0, 
-        opacity: 1, 
-        stagger: 0.05, // Reduced stagger
-        duration: 0.6, // Reduced duration
+        opacity: 1,
+        duration: 0.6,
         scrollTrigger: {
           trigger: '.team-grid',
-          start: "top 90%", // Already at 90%
+          start: "top 90%",
           once: true
         }
       }
@@ -128,10 +127,10 @@ export default function AboutPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.6, // Reduced duration
+        duration: 0.6,
         scrollTrigger: {
           trigger: '.values-section',
-          start: "top 90%", // Changed from 80% to 90%
+          start: "top 90%",
           once: true
         }
       }
@@ -143,27 +142,27 @@ export default function AboutPage() {
       { 
         y: 0, 
         opacity: 1, 
-        duration: 0.6, // Reduced duration
-        delay: 0.1, // Reduced delay
+        duration: 0.6,
+        delay: 0.1,
         scrollTrigger: {
           trigger: '.values-section',
-          start: "top 90%", // Changed from 80% to 90%
+          start: "top 90%",
           once: true
         }
       }
     )
     
+    // Value items - UPDATED: removed stagger
     gsap.fromTo(
       '.value-item', 
       { y: 30, opacity: 0 },
       { 
         y: 0, 
-        opacity: 1, 
-        stagger: 0.05, // Reduced stagger
-        duration: 0.6, // Reduced duration
+        opacity: 1,
+        duration: 0.6,
         scrollTrigger: {
           trigger: '.values-grid',
-          start: "top 90%", // Already at 90%
+          start: "top 90%",
           once: true
         }
       }
@@ -173,6 +172,7 @@ export default function AboutPage() {
       ScrollTrigger.getAll().forEach(t => t.kill())
     }
   }, [])
+
 
   return (
     <div className="overflow-hidden">
