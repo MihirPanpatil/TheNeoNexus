@@ -47,18 +47,17 @@ export default function Services() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
     
-    const cards = gsap.utils.toArray('.service-card')
-    
+    // Title and description animations
     gsap.fromTo(
       '.services-title', 
       { y: 50, opacity: 0 },
       {
         y: 0,
         opacity: 1,
-        duration: 0.6, // Reduced duration
+        duration: 0.6,
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 90%", // Changed from 80% to 90%
+          start: "top 90%",
           once: true
         }
       }
@@ -70,33 +69,32 @@ export default function Services() {
       {
         y: 0,
         opacity: 1,
-        duration: 0.6, // Reduced duration
-        delay: 0.1, // Reduced delay
+        duration: 0.6,
+        delay: 0.1,
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 90%", // Changed from 80% to 90%
+          start: "top 90%",
           once: true
         }
       }
     )
     
-    cards.forEach((card, index) => {
-      gsap.fromTo(
-        card, 
-        { y: 50, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.6, // Reduced duration
-          delay: 0.1 + (index * 0.05), // Reduced delay and stagger
-          scrollTrigger: {
-            trigger: card,
-            start: "top 90%", // Already at 90%
-            once: true
-          }
+    // Animate all cards at once instead of staggered
+    gsap.fromTo(
+      '.service-card', 
+      { y: 30, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        delay: 0.2, // Single delay for all cards
+        scrollTrigger: {
+          trigger: '.service-card',
+          start: "top 90%",
+          once: true
         }
-      )
-    })
+      }
+    )
     
     return () => {
       ScrollTrigger.getAll().forEach(t => t.kill())

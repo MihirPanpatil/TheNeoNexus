@@ -78,10 +78,11 @@ export default function Portfolio() {
       {
         y: 0,
         opacity: 1,
-        duration: 0.8,
+        duration: 0.6, // Reduced duration
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 80%",
+          start: "top 90%", // Changed from 80% to 90%
+          once: true
         }
       }
     )
@@ -92,11 +93,12 @@ export default function Portfolio() {
       {
         y: 0,
         opacity: 1,
-        duration: 0.8,
-        delay: 0.2,
+        duration: 0.6, // Reduced duration
+        delay: 0.1, // Reduced delay
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 80%",
+          start: "top 90%", // Changed from 80% to 90%
+          once: true
         }
       }
     )
@@ -107,11 +109,12 @@ export default function Portfolio() {
       {
         y: 0,
         opacity: 1,
-        duration: 0.8,
-        delay: 0.3,
+        duration: 0.6, // Reduced duration
+        delay: 0.2, // Reduced delay
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 80%",
+          start: "top 90%", // Changed from 80% to 90%
+          once: true
         }
       }
     )
@@ -122,17 +125,14 @@ export default function Portfolio() {
   }, [])
   
   useEffect(() => {
-    // Animate projects when tab changes
-    const projectItems = document.querySelectorAll('.project-item')
-    
+    // Animate all projects at once when tab changes
     gsap.fromTo(
-      projectItems, 
-      { y: 30, opacity: 0 },
+      '.project-item', 
+      { y: 20, opacity: 0 },
       {
         y: 0,
         opacity: 1,
-        stagger: 0.1,
-        duration: 0.6,
+        duration: 0.4, // Faster animation
         ease: "power3.out"
       }
     )

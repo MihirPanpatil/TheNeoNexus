@@ -71,10 +71,11 @@ export default function Testimonials() {
       {
         y: 0,
         opacity: 1,
-        duration: 0.8,
+        duration: 0.6, // Reduced duration
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 80%",
+          start: "top 90%", // Changed from 80% to 90%
+          once: true
         }
       }
     )
@@ -85,11 +86,12 @@ export default function Testimonials() {
       {
         y: 0,
         opacity: 1,
-        duration: 0.8,
-        delay: 0.2,
+        duration: 0.6, // Reduced duration
+        delay: 0.1, // Reduced delay
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 80%",
+          start: "top 90%", // Changed from 80% to 90%
+          once: true
         }
       }
     )
@@ -100,11 +102,11 @@ export default function Testimonials() {
   }, [])
   
   useEffect(() => {
-    // Animate testimonial change
+    // Animate testimonial change - faster animation
     gsap.fromTo(
       '.testimonial-card', 
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }
+      { opacity: 0, y: 10 }, // Reduced y value
+      { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" } // Reduced duration
     )
   }, [activeIndex])
 

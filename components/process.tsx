@@ -52,10 +52,10 @@ export default function Process() {
       {
         y: 0,
         opacity: 1,
-        duration: 0.6, // Reduced duration
+        duration: 0.6,
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 90%", // Changed from 80% to 90%
+          start: "top 90%",
           once: true
         }
       }
@@ -67,35 +67,32 @@ export default function Process() {
       {
         y: 0,
         opacity: 1,
-        duration: 0.6, // Reduced duration
-        delay: 0.1, // Reduced delay
+        duration: 0.6,
+        delay: 0.1,
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 90%", // Changed from 80% to 90%
+          start: "top 90%",
           once: true
         }
       }
     )
     
-    const processSteps = gsap.utils.toArray('.process-step')
-    
-    processSteps.forEach((step, index) => {
-      gsap.fromTo(
-        step, 
-        { y: 50, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.6, // Reduced duration
-          delay: 0.1 + (index * 0.05), // Reduced delay and stagger
-          scrollTrigger: {
-            trigger: step,
-            start: "top 90%", // Already at 90%
-            once: true
-          }
+    // Animate all process steps at once instead of staggered
+    gsap.fromTo(
+      '.process-step', 
+      { y: 30, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        delay: 0.2, // Single delay for all steps
+        scrollTrigger: {
+          trigger: '.process-step',
+          start: "top 90%",
+          once: true
         }
-      )
-    })
+      }
+    )
     
     return () => {
       ScrollTrigger.getAll().forEach(t => t.kill())
