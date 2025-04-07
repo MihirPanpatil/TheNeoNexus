@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Luxe Studio | Premium Freelancing Agency',
+  title: 'TheNeoNexus | Your Premium Freelancing Agency',
   description: 'Elevate your brand with our premium freelancing services. We deliver exceptional design, development, and marketing solutions.',
 };
 
