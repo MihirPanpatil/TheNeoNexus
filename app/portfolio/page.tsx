@@ -152,15 +152,25 @@ export default function PortfolioPage() {
             <h1 className="portfolio-title font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Our Portfolio
             </h1>
-            <p className="portfolio-subtitle text-xl md:text-2xl text-muted-foreground">
+            <p className="portfolio-subtitle text-xl md:text-2xl text-muted-foreground mb-8">
               Explore our collection of award-winning projects that showcase our creativity and expertise.
             </p>
+            
+            {/* Custom gradient button */}
+            <Link href="#portfolio-section">
+              <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent flex items-center">
+                  Explore Our Work
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
       </section>
       
       {/* Portfolio Section */}
-      <section className="py-16 md:py-24">
+      <section id="portfolio-section" className="py-16 md:py-24">
         <div className="container">
           {/* Filter buttons */}
           <div className="filter-buttons flex flex-wrap justify-center gap-4 mb-16">

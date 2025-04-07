@@ -57,8 +57,8 @@ export default function Navbar() {
     )}>
       <div className="container flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <span className="font-playfair text-2xl font-bold tracking-tight">
-            Luxe<span className="text-primary">Studio</span>
+          <span className="font-playfair text-3xl font-bold tracking-tight">
+            TheNeo<span className="text-primary">Nexus</span>
           </span>
         </Link>
 
@@ -83,9 +83,12 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-4">
           <ModeToggle />
-          <Button asChild>
-            <Link href="/contact">Get in Touch</Link>
-          </Button>
+          
+            <Link href="/contact">
+            <button type="button" className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Get in Touch!</button>
+
+            </Link>
+         
         </div>
 
         <div className="flex md:hidden items-center gap-4">

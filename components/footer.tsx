@@ -9,8 +9,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <Link href="/" className="flex items-center gap-2 mb-6">
-              <span className="font-playfair text-2xl font-bold tracking-tight">
-                Luxe<span className="text-primary">Studio</span>
+              <span className="font-playfair text-3xl font-bold tracking-tight">
+                TheNeo<span className="text-primary">Nexus</span>
               </span>
             </Link>
             <p className="text-muted-foreground mb-6">

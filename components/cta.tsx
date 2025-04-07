@@ -61,12 +61,11 @@ export default function CTA() {
           <p className="cta-description text-xl text-muted-foreground mb-8">
             Let's collaborate to create something extraordinary. Contact us today to discuss your project and discover how we can help you achieve your goals.
           </p>
-          <Button size="lg" className="cta-button" asChild>
+          
             <Link href="/contact">
-              Get Started
-              <ArrowRight className="ml-2 h-4 w-4" />
+            <button type="button" className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2.5 text-center me-2 mb-2">Get Started!</button>
             </Link>
-          </Button>
+          
         </div>
       </div>
     </section>
