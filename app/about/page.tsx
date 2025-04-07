@@ -185,7 +185,7 @@ export default function AboutPage() {
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="about-title font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              About LuxeStudio
+              About TheNeoNexus
             </h1>
             <p className="about-subtitle text-xl md:text-2xl text-muted-foreground">
               We're a team of passionate creatives dedicated to crafting exceptional digital experiences that elevate brands and drive results.
@@ -204,7 +204,7 @@ export default function AboutPage() {
               </h2>
               <div className="story-content space-y-4 text-lg">
                 <p>
-                  Founded in 2018, LuxeStudio began with a simple mission: to create digital experiences that are as beautiful as they are functional. What started as a small team of three passionate designers has grown into a full-service creative agency with a global client base.
+                  Founded in 2025, TheNeoNexus began with a simple mission: to create digital experiences that are as beautiful as they are functional. What started as a small team of three passionate designers has grown into a full-service creative agency with a global client base.
                 </p>
                 <p>
                   Our journey has been defined by a relentless pursuit of excellence and a commitment to pushing creative boundaries. We believe that exceptional design has the power to transform businesses and create meaningful connections with audiences.
@@ -223,7 +223,7 @@ export default function AboutPage() {
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-background p-4 rounded-lg shadow-lg">
-                <p className="text-sm font-medium">Established 2018</p>
+                <p className="text-sm font-medium">Established 2025</p>
               </div>
             </div>
           </div>
