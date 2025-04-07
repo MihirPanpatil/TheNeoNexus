@@ -6,6 +6,7 @@ import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ 
   subsets: ['latin'],
